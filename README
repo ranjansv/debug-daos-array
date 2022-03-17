@@ -5,3 +5,9 @@ cd build
 cmake ..
 module unload impi/19.0.9
 #Subsequent make clean and make dont need this
+#
+#
+#Run benchmark using
+./exp-bench-run.sh config/test.sh
+
+Most recent result is available in results/latest
