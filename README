@@ -1,0 +1,7 @@
+#One time setup
+module load impi/19.0.9
+mkdir build
+cd build
+cmake ..
+module unload impi/19.0.9
+#Subsequent make clean and make dont need this
