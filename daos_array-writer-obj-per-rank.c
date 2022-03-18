@@ -264,9 +264,11 @@ int main(int argc, char **argv) {
   write_data(arr_size_mb, steps, 0 /* Async I/O flag False*/);
 
   /** close container */
+  MPI_Barrier(MPI_COMM_WORLD);
   daos_cont_close(coh, NULL);
 
   /** disconnect from pool & destroy it */
+  MPI_Barrier(MPI_COMM_WORLD);
   daos_pool_disconnect(poh, NULL);
   // if (rank == 0)
   /** free allocated storage */
